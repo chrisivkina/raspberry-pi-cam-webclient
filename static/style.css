@@ -1,0 +1,107 @@
+:root {
+    /* https://www.happyhues.co/palettes/4 */
+
+    /* Elements */
+    --background: #16161a;
+    --button: #7f5af0;
+    --button-hover: #6c4bd8;
+    --headline: #fffffe;
+    --paragraph: #94a1b2;
+    --headline-dark: #010101;
+    --button-text: #fffffe;
+
+    /* Stroke */
+    --stroke: #010101;
+    --secondary: #72757e;
+    --main: #272727;
+    --tertiary: #2cb67d;
+    --highlight: #7f5af0;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--paragraph);
+    background-color: var(--background);
+}
+
+body, html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--highlight) var(--main);
+}
+
+p, button, span, input {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--headline);
+    margin: 0 0 10px;
+    padding:0;
+}
+
+li {
+    list-style-type: circle;
+    margin-bottom: 4px;
+}
+
+.top-text {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid var(--highlight);
+    border-radius: 5px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: .2s ease-in-out;
+    border-bottom: var(--button) 2px solid;
+}
+
+a:hover {
+    border-bottom: var(--button-hover) 2px solid;
+}
+
+/* mobile settings */
+@media (pointer:none), (pointer:coarse) {
+    h1 {
+        font-size: 4em;
+    }
+    h2 {
+        font-size: 4em;
+    }
+    p, a, li {
+        font-size: 1.5em;
+    }
+}
+
+#images-list > li, #videos-list > li, #image_dates_list > li, #video_dates_list > li {
+    margin-left: -25px;
+}
+
+ /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--main);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--highlight);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--button-hover);
+}
